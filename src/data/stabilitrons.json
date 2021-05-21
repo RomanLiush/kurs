@@ -1,0 +1,53 @@
+[
+  {
+    "id": "0",
+
+    "korpus": "SOD-80",
+    "napruga": "15",
+    "strum": "5 м",
+    "potuzhn": "0.4",
+    "montazh": "SMD",
+    "temp_kof": "11.4 мВ/K",
+
+    "in_market": "542",
+    "info": "Стабілітрон",
+    "model": "BZV55-C15",
+    "url": "https://www.rcscomponents.kiev.ua/modules/Asers_Shop/images/productimages/sod-80.jpg",
+    "price": "2",
+    "articul": "09218"
+  },
+  {
+    "id": "1",
+
+    "korpus": "SOD-80",
+    "napruga": "15",
+    "strum": "5 м",
+    "potuzhn": "0.4",
+    "montazh": "SMD",
+    "temp_kof": "11.4 мВ/K",
+
+    "in_market": "542",
+    "info": "Стабілітрон",
+    "model": "BZV55-C15",
+    "url": "https://www.rcscomponents.kiev.ua/modules/Asers_Shop/images/productimages/sod-80.jpg",
+    "price": "2",
+    "articul": "09218"
+  },
+  {
+    "id": "2",
+
+    "korpus": "SOD-80",
+    "napruga": "15",
+    "strum": "5 м",
+    "potuzhn": "0.4",
+    "montazh": "SMD",
+    "temp_kof": "11.4 мВ/K",
+
+    "in_market": "542",
+    "info": "Стабілітрон",
+    "model": "BZV55-C15",
+    "url": "https://www.rcscomponents.kiev.ua/modules/Asers_Shop/images/productimages/sod-80.jpg",
+    "price": "2",
+    "articul": "09218"
+  }
+]

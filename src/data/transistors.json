@@ -1,0 +1,122 @@
+[
+  {
+    "id": "0",
+
+    "marka": "Toshiba",
+    "type": "JFET",
+    "polarn": "P",
+    "power": "0.125",
+    "napruga_1": "40",
+    "napruga_2": "4",
+    "strum": "0.005",
+    "temp": "150",
+    "korpus": "TO92",
+
+    "in_market": "22",
+    "info": "Транзистор 2N5460 P канальний JFET TO92 - підсилювач загального призначення. Цей пристрій розроблено в першу чергу для звуку низького рівня та призначений для додатків з джерелами сигналу високого імпедансу.",
+    "model": "2N5460",
+    "url": "https://blackchip.com.ua/image/catalog/tovar/tranzustor/to92.jpg",
+    "price": "5.5",
+    "articul": "02218"
+  },
+  {
+    "id": "1",
+
+    "marka": "Toshiba",
+    "type": "MOSFET",
+    "polarn": "P",
+    "power": "100",
+    "napruga_1": "60",
+    "napruga_2": "20",
+    "strum": "20",
+    "temp": "150",
+    "korpus": "TO220FL",
+
+    "in_market": "12",
+    "info": "Транзистор 2SJ241 MOSFET P канальний TO220FL - цей компонент застосовують в DC-DC конвертерах та різноманітних блоках живлення.",
+    "model": "2SJ241",
+    "url": "https://blackchip.com.ua/image/catalog/tovar/tranzustor/TO220FL.jpg",
+    "price": "9",
+    "articul": "02318"
+  },
+  {
+    "id": "2",
+
+    "marka": "Europe",
+    "type": "MOSFET",
+    "polarn": "N",
+    "power": "150",
+    "napruga_1": "900",
+    "napruga_2": "200",
+    "strum": "9",
+    "temp": "150",
+    "korpus": "TO-3PB",
+
+    "in_market": "42",
+    "info": "Транзистор 2SK2611 900V 9A N канальний - застосовується як силовий ключ в різних пристроях в імпульсних блоках живлення, інверторах напруги, в тому числі у зварювальних апаратах інверторного типу.",
+    "model": "2SK2611",
+    "url": "https://blackchip.com.ua/image/catalog/tovar/tranzustor/TO-3PB.jpg",
+    "price": "39",
+    "articul": "02518"
+  },
+  {
+    "id": "3",
+
+    "marka": "Europe",
+    "type": "MOSFET",
+    "polarn": "N",
+    "power": "80",
+    "napruga_1": "700",
+    "napruga_2": "30",
+    "strum": "10",
+    "temp": "150",
+    "korpus": "TO220F",
+
+    "in_market": "72",
+    "info": "Транзистор 2SK3673 MOSFET N канальний TO220F - призначений для безперебійних блоків живлення, стабілізаторів напруги та інших силових схем.",
+    "model": "2SK3673",
+    "url": "https://blackchip.com.ua/image/catalog/tovar/tranzustor/to-220f.jpg",
+    "price": "52",
+    "articul": "03267"
+  },
+  {
+    "id": "4",
+
+    "marka": "Intel",
+    "type": "MOSFET",
+    "polarn": "N-Channel",
+    "power": "150",
+    "napruga_1": "900",
+    "napruga_2": "30",
+    "strum": "9",
+    "temp": "-55 ... 150",
+    "korpus": "TO-3P-3",
+
+    "in_market": "32",
+    "info": "Транзистор 2SK3878 MOSFET N канальний TO-3P - призначений для використання в джерелах вторинного електроживлення, в регуляторах, стабілізаторах і перетворювачах, схемах управління електродвигунами та інших блоках і вузлах радіоелектронної апаратури.",
+    "model": "2SK3878",
+    "url": "https://blackchip.com.ua/image/catalog/tovar/tranzustor/TO-3PB.jpg",
+    "price": "64",
+    "articul": "03876"
+  },
+  {
+    "id": "5",
+
+    "marka": "Toshiba",
+    "type": "MOSFET",
+    "polarn": "N",
+    "power": "1.4",
+    "napruga_1": "30",
+    "napruga_2": "12",
+    "strum": "5.7",
+    "temp": "150",
+    "korpus": "SOT23",
+
+    "in_market": "57",
+    "info": "Транзистор AO3400A (A09T) MOSFET N канальний SOT23 - застосовують в різних електронних схемах. Основними перевагами нових приладів в корпусах SOT23 є менші Rds (on) і тепловий опір корпусу. Опір каналу MOSFET залежить від напруги на затворі та від робочої температури.",
+    "model": "AO3400A",
+    "url": "https://blackchip.com.ua/image/catalog/tovar/tranzustor/sot-23.jpg",
+    "price": "3",
+    "articul": "01735"
+  }
+]

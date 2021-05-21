@@ -1,0 +1,21 @@
+a {
+  text-decoration: none;
+  color: #000; }
+
+.main {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+  display: flex; }
+  .main__leftbar {
+    width: 25%;
+    height: 1000px; }
+  .main__content {
+    width: 73%;
+    height: 1000px;
+    margin-left: 2%; }
+
+.title {
+  padding: 10px; }
+
+/*# sourceMappingURL=homepage.module.css.map */

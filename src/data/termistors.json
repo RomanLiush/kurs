@@ -1,0 +1,104 @@
+[
+  {
+    "id": "0",
+
+    "proizvoditel": "Murata",
+    "opir": "10 кОм",
+    "usage": "Вимірювання",
+    "max_tok": "0.031",
+    "type": "NTC",
+    "size": "0603",
+
+    "in_market": "122",
+    "info": "NTC термістор, 10 kOhm, ±1%",
+    "model": "NCP18XH103F03RB",
+    "url": "http://media.digikey.com/photos/Murata%20Photos/NCP,GCM%20SERIES%200603.jpg",
+    "price": "4",
+    "articul": "08218"
+  },
+  {
+    "id": "1",
+
+    "proizvoditel": "Murata",
+    "opir": "10 кОм",
+    "usage": "Вимірювання",
+    "max_tok": "0.031",
+    "type": "NTC",
+    "size": "0603",
+
+    "in_market": "122",
+    "info": "NTC термістор, 10 kOhm, ±1%",
+    "model": "NCP18XH103F03RB",
+    "url": "http://media.digikey.com/photos/Murata%20Photos/NCP,GCM%20SERIES%200603.jpg",
+    "price": "4",
+    "articul": "08218"
+  },
+  {
+    "id": "2",
+
+    "proizvoditel": "Murata",
+    "opir": "10 кОм",
+    "usage": "Вимірювання",
+    "max_tok": "0.031",
+    "type": "NTC",
+    "size": "0603",
+
+    "in_market": "122",
+    "info": "NTC термістор, 10 kOhm, ±1%",
+    "model": "NCP18XH103F03RB",
+    "url": "http://media.digikey.com/photos/Murata%20Photos/NCP,GCM%20SERIES%200603.jpg",
+    "price": "4",
+    "articul": "08218"
+  },
+  {
+    "id": "3",
+
+    "proizvoditel": "Murata",
+    "opir": "10 кОм",
+    "usage": "Вимірювання",
+    "max_tok": "0.031",
+    "type": "NTC",
+    "size": "0603",
+
+    "in_market": "122",
+    "info": "NTC термістор, 10 kOhm, ±1%",
+    "model": "NCP18XH103F03RB",
+    "url": "http://media.digikey.com/photos/Murata%20Photos/NCP,GCM%20SERIES%200603.jpg",
+    "price": "4",
+    "articul": "08218"
+  },
+  {
+    "id": "4",
+
+    "proizvoditel": "Murata",
+    "opir": "10 кОм",
+    "usage": "Вимірювання",
+    "max_tok": "0.031",
+    "type": "NTC",
+    "size": "0603",
+
+    "in_market": "122",
+    "info": "NTC термістор, 10 kOhm, ±1%",
+    "model": "NCP18XH103F03RB",
+    "url": "http://media.digikey.com/photos/Murata%20Photos/NCP,GCM%20SERIES%200603.jpg",
+    "price": "4",
+    "articul": "08218"
+  },
+  {
+    "id": "5",
+
+    "proizvoditel": "Murata",
+    "opir": "10 кОм",
+    "usage": "Вимірювання",
+    "max_tok": "0.031",
+    "type": "NTC",
+    "size": "0603",
+
+    "in_market": "122",
+    "info": "NTC термістор, 10 kOhm, ±1%",
+    "model": "NCP18XH103F03RB",
+    "url": "http://media.digikey.com/photos/Murata%20Photos/NCP,GCM%20SERIES%200603.jpg",
+    "price": "4",
+    "articul": "08218"
+  }
+]
