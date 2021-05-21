@@ -1,7 +1,6 @@
 import React from 'react';
 
 import style from '../../assets/style/scss/rules/rules.module.css'
-import {NavLink} from "react-router-dom";
 import WayBlock from "../way-block/way-block";
 
 const Rules = () => {
