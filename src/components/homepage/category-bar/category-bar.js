@@ -21,7 +21,7 @@ export default function CategoryBar() {
 
     return (
         <div className={style.main}>
-            <span className={style.category}>Категорії</span>
+            <span className={style.category}>Category</span>
             <div className={style.trees}>
                 <TreeView
                     className={classes.root}
@@ -31,40 +31,35 @@ export default function CategoryBar() {
                 >
                     <div className={`${style.tree_item}`}>
 
-                        <TreeItem nodeId="1" label="Резистори">
-                            <NavLink to={'/catalog/resistors'}><TreeItem nodeId="2" label="Резистори"/></NavLink>
+                        <TreeItem nodeId="1" label="BMW">
+                            <NavLink to={'/catalog/bmw'}><TreeItem nodeId="2" label="BMW"/></NavLink>
                         </TreeItem>
                     </div>
                     <div className={`${style.tree_item}`}>
-                    <TreeItem nodeId="5" label="Конденсатори">
-                        <NavLink to={'/catalog/condensators'}><TreeItem nodeId="2" label="Конденсатори"/></NavLink>
+                    <TreeItem nodeId="5" label="Volvo">
+                        <NavLink to={'/catalog/condensators'}><TreeItem nodeId="2" label="Volvo"/></NavLink>
                         </TreeItem>
                     </div>
                     <div className={`${style.tree_item}`}>
-                    <TreeItem nodeId="10" label="Транзистори">
-                        <NavLink to={'/catalog/transistors'}><TreeItem nodeId="2" label="Транзистори"/></NavLink>
+                    <TreeItem nodeId="10" label="Mercedes Benz">
+                        <NavLink to={'/catalog/transistors'}><TreeItem nodeId="2" label="Mercedes Benz"/></NavLink>
                     </TreeItem>
                     </div>
                     <div className={`${style.tree_item}`}>
-                    <TreeItem nodeId="11" label="Реле">
-                        <NavLink to={'/catalog/rele'}><TreeItem nodeId="2" label="Реле"/></NavLink>
-
+                    <TreeItem nodeId="11" label="Ford">
+                        <NavLink to={'/catalog/rele'}><TreeItem nodeId="2" label="Ford"/></NavLink>
                     </TreeItem>
                     </div>
                     <div className={`${style.tree_item}`}>
-                    <TreeItem nodeId="12" label="Модеми і радіомодулі">
-                        <NavLink to={'/catalog/modems'}><TreeItem nodeId="2" label="Модеми і радіомодулі"/></NavLink>
-
+                    <TreeItem nodeId="12" label="Volkswagen">
+                        <NavLink to={'/catalog/modems'}><TreeItem nodeId="2" label="Volkswagen"/></NavLink>
                     </TreeItem>
                     </div>
                     <div className={`${style.tree_item}`}>
-                    <TreeItem nodeId="13" label="Термістори">
-                        <NavLink to={'/catalog/termistors'}><TreeItem nodeId="2" label="Термістори"/></NavLink>
-
+                    <TreeItem nodeId="13" label="ZAZ">
+                        <NavLink to={'/catalog/termistors'}><TreeItem nodeId="2" label="ZAZ"/></NavLink>
                     </TreeItem>
                     </div>
-
-
                 </TreeView>
             </div>
         </div>

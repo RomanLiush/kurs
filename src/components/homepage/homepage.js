@@ -15,9 +15,9 @@ const Homepage = () => {
                 <CategoryBar/>
             </div>
             <div className={style.main__content}>
-                <h3 className={style.title}><NavLink to={'/'}>Резистори</NavLink></h3>
+                <h3 className={style.title}><NavLink to={'/'}>Das Auto</NavLink></h3>
                 <Sliderr data={slider_urls[0]}/>
-                <h3 className={style.title}><NavLink to={'/'}>Транзистори</NavLink></h3>
+                <h3 className={style.title}><NavLink to={'/'}>Porshe</NavLink></h3>
                 <Sliderr data={slider_urls[1]}/>
 
             </div>

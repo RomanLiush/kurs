@@ -41,7 +41,7 @@ const Footer = () => {
 
                 </div>
                 <div className={style.main__copyright}>
-                    <p>Copyright © 2021 Lyzhychka Marian. Всі права захищено.</p>
+                    <p>Copyright © 2021 Yaryna Pavlovska. Всі права захищено.</p>
                 </div>
                 <div>
                 </div>

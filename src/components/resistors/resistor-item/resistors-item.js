@@ -56,7 +56,7 @@ const ResistorsItem = (props) => {
                             <span
                                 className={style.price}><p>Ціна:  </p> <span><h5>{props.data.price} грн</h5></span></span>
                         </Card.Text>
-                        {admin.key === 0 && <NavLink to={`/catalog/resistors/${props.data.id}`}><Button variant="danger"
+                        {admin.key === 0 && <NavLink to={`/catalog/bmw/${props.data.id}`}><Button variant="danger"
                                                                                                         className={style.btn}
                                                                                                         onClick={() => {
                                                                                                             setVisible(!visible)

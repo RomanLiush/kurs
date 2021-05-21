@@ -307,12 +307,12 @@ const App = () => {
                 <Route path='/catalog' exact render={() => <Catalog/>}/>
                 <Route path='/rules' exact render={() => <Rules/>}/>
 
-                <Route path='/catalog/resistors'  exact render={() => <Resistors setResID={setResID}
+                <Route path='/catalog/bmw'  exact render={() => <Resistors setResID={setResID}
                                                                                  deleteItem={deleteItem}
                                                                                  data={state}
 
                 />}/>
-                <Route path='/catalog/resistors/:id' render={() => <ResistorInfoPage data={data_res[resID]}
+                <Route path='/catalog/bmw/:id' render={() => <ResistorInfoPage data={data_res[resID]}
                                                                                      arr={arr}
                                                                                      setArr={setArr}
                 />}  />
