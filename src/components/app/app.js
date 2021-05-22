@@ -48,8 +48,9 @@ const App = () => {
     const [arr,setArr] = useState([])
 
     const [state, setState] = useState(data_res);
-    // const [editState, setEditState] = useState(resist_data);
+    const [stateVolvo, setStateVolvo] = useState(data_cond);
 
+//BMW
     const deleteItem = (id) => {
         setState(() => {
             const idx = state.findIndex(el => +el.id === id);
@@ -59,15 +60,10 @@ const App = () => {
                 ...state.slice(idx + 1)
             ]
 
-            // console.log(id, 'id')
-            // console.log(idx, 'idx')
-            // console.log(newArr, 'NEW')
             return newArr
 
         })
     }
-
-
 
     const editedAuto = localStorage.getItem('editAuto');
 
@@ -92,17 +88,46 @@ const App = () => {
         })
     }
 
-    // const deleteItem = (id) => {
-    //     setState(() => {
-    //         resist_data.filter((el, i) => {
-    //             if(+el.id === id) {
-    //                 resist_data.splice(id, 1)
-    //                 console.log(resist_data, 'resist data')
-    //                 return resist_data
-    //             }
-    //         })
-    //     })
-    // }
+
+//VOLVO
+
+    const deleteItemVolvo = (id) => {
+        setStateVolvo(() => {
+            const idx = stateVolvo.findIndex(el => +el.id === id);
+
+            const newArr = [
+                ...stateVolvo.slice(0, idx),
+                ...stateVolvo.slice(idx + 1)
+            ]
+
+            return newArr
+
+        })
+    }
+
+    // const editedAuto = localStorage.getItem('editAuto');
+
+    const editItemVolvo = (id) => {
+        setStateVolvo(() => {
+            const idx = stateVolvo.findIndex(el => +el.id === id);
+
+            console.log(id, 'id id')
+            console.log(idx, 'idx idx')
+
+            stateVolvo.splice(id, 1, JSON.parse(editedAuto))
+
+            const newArr = [...stateVolvo]
+            return newArr
+        })
+    }
+
+    const newItemVolvo = (newAuto) => {
+        setStateVolvo(() => {
+            const newArr = [...stateVolvo, newAuto]
+            return newArr
+        })
+    }
+
 
     return (
 
@@ -115,19 +140,25 @@ const App = () => {
                 <Route path='/rules' exact render={() => <Rules/>}/>
 
                 <Route path='/catalog/bmw'  exact render={() => <Resistors setResID={setResID}
-                                                                                 deleteItem={deleteItem}
-                                                                                 editItem={editItem}
-                                                                                 newItem={newItem}
-                                                                                 data={state}
+                                                                           deleteItem={deleteItem}
+                                                                           editItem={editItem}
+                                                                           newItem={newItem}
+                                                                           data={state}
 
                 />}/>
                 <Route path='/catalog/bmw/:id' render={() => <ResistorInfoPage data={data_res[resID]}
-                                                                                     arr={arr}
-                                                                                     setArr={setArr}
-                />}  />
+                                                                               arr={arr}
+                                                                               setArr={setArr}
+                />}/>
 
-                <Route path='/catalog/condensators'  exact render={() => <Condensators setResID={setResID}/>}/>
-                <Route path='/catalog/condensators/:id' render={() => <CondensatorsInfoPage data={data_cond[resID]}
+                <Route path='/catalog/volvo'  exact render={() => <Condensators setResID={setResID}
+                                                                                deleteItemVolvo={deleteItemVolvo}
+                                                                                editItemVolvo={editItemVolvo}
+                                                                                newItemVolvo={newItemVolvo}
+                                                                                data={stateVolvo}
+
+                />}/>
+                <Route path='/catalog/volvo/:id' render={() => <CondensatorsInfoPage data={data_cond[resID]}
                                                                                             arr={arr}
                                                                                             setArr={setArr}
                 />}  />

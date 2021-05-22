@@ -37,7 +37,7 @@ export default function CategoryBar() {
                     </div>
                     <div className={`${style.tree_item}`}>
                     <TreeItem nodeId="5" label="Volvo">
-                        <NavLink to={'/catalog/condensators'}><TreeItem nodeId="2" label="Volvo"/></NavLink>
+                        <NavLink to={'/catalog/volvo'}><TreeItem nodeId="2" label="Volvo"/></NavLink>
                         </TreeItem>
                     </div>
                     <div className={`${style.tree_item}`}>
