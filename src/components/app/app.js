@@ -49,6 +49,8 @@ const App = () => {
 
     const [state, setState] = useState(data_res);
     const [stateVolvo, setStateVolvo] = useState(data_cond);
+    const [stateMers, setStateMers] = useState(data_tran);
+    const [stateFord, setStateFord] = useState(data_rele);
 
 //BMW
     const deleteItem = (id) => {
@@ -129,6 +131,85 @@ const App = () => {
     }
 
 
+//MERS
+
+    const deleteItemMers = (id) => {
+        setStateMers(() => {
+            const idx = stateMers.findIndex(el => +el.id === id);
+
+            const newArr = [
+                ...stateMers.slice(0, idx),
+                ...stateMers.slice(idx + 1)
+            ]
+
+            return newArr
+
+        })
+    }
+
+    // const editedAuto = localStorage.getItem('editAuto');
+
+    const editItemMers = (id) => {
+        setStateMers(() => {
+            const idx = stateMers.findIndex(el => +el.id === id);
+
+            console.log(id, 'id id')
+            console.log(idx, 'idx idx')
+
+            stateMers.splice(id, 1, JSON.parse(editedAuto))
+
+            const newArr = [...stateMers]
+            return newArr
+        })
+    }
+
+    const newItemMers = (newAuto) => {
+        setStateMers(() => {
+            const newArr = [...stateMers, newAuto]
+            return newArr
+        })
+    }
+
+//FORD
+
+    const deleteItemFord = (id) => {
+        setStateFord(() => {
+            const idx = stateFord.findIndex(el => +el.id === id);
+
+            const newArr = [
+                ...stateFord.slice(0, idx),
+                ...stateFord.slice(idx + 1)
+            ]
+
+            return newArr
+
+        })
+    }
+
+    // const editedAuto = localStorage.getItem('editAuto');
+
+    const editItemFord = (id) => {
+        setStateFord(() => {
+            const idx = stateFord.findIndex(el => +el.id === id);
+
+            console.log(id, 'id id')
+            console.log(idx, 'idx idx')
+
+            stateFord.splice(id, 1, JSON.parse(editedAuto))
+
+            const newArr = [...stateFord]
+            return newArr
+        })
+    }
+
+    const newItemFord = (newAuto) => {
+        setStateFord(() => {
+            const newArr = [...stateFord, newAuto]
+            return newArr
+        })
+    }
+
+
     return (
 
         <div>
@@ -163,14 +244,26 @@ const App = () => {
                                                                                             setArr={setArr}
                 />}  />
 
-                <Route path='/catalog/transistors'  exact render={() => <Transistors setResID={setResID}/>}/>
-                <Route path='/catalog/transistors/:id' render={() => <TransistorsInfoPage  data={data_tran[resID]}
+                <Route path='/catalog/mers'  exact render={() => <Transistors setResID={setResID}
+                                                                              deleteItemMers={deleteItemMers}
+                                                                              editItemMers={editItemMers}
+                                                                              newItemMers={newItemMers}
+                                                                              data={stateMers}
+
+                />}/>
+                <Route path='/catalog/mers/:id' render={() => <TransistorsInfoPage  data={data_tran[resID]}
                                                                                             arr={arr}
                                                                                             setArr={setArr}
                 />}  />
 
-                <Route path='/catalog/rele'  exact render={() => <Rele setResID={setResID}/>}/>
-                <Route path='/catalog/rele/:id' render={() => <ReleInfoPage  data={data_rele[resID]}
+                <Route path='/catalog/ford'  exact render={() => <Rele setResID={setResID}
+                                                                       deleteItemFord={deleteItemFord}
+                                                                       editItemFord={editItemFord}
+                                                                       newItemFord={newItemFord}
+                                                                       data={stateFord}
+
+                />}/>
+                <Route path='/catalog/ford/:id' render={() => <ReleInfoPage  data={data_rele[resID]}
                                                                              arr={arr}
                                                                              setArr={setArr}
                 />}  />
