@@ -7,7 +7,7 @@ const Rules = () => {
     return (
         <div className={style.main}>
             <WayBlock data={[
-                {name: "Головна", url: "/home"},
+                {name: "Головна", url: "/"},
                 {name: "Правила", url: "/rules"}
                 ]}/>
 

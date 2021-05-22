@@ -2,29 +2,56 @@ import React, {useState} from 'react';
 import style from "../../assets/style/scss/resistors/resistors.module.css";
 import CategoryBar from "../homepage/category-bar/category-bar";
 import ResistorsItem from "./resistor-item/resistors-item";
-
-
+import NewAutoModal from "./resistor-item/newAutoModal";
 
 const Resistors = (props) => {
+
+    const [isNewModal, setNewModal] = useState(false);
+
+    const adminValue = localStorage.getItem('admin');
+
+    const admin = {
+        key: +adminValue,
+    }
+
+    const onOpenNew = () => {
+        setNewModal(true)
+    }
+
+    const onCloseNew = () => {
+        setNewModal(false)
+    }
 
     const data = require('../../data/resistors.json')
     console.log(props.deleteItem, 'gggggggggggg')
     console.log(props.data, 'props data datat datat')
+    console.log(props.editItem, 'edit Item edit')
     let item = props.data.map(i => <ResistorsItem setResID={props.setResID}
-                                            data={i}
-                                            infoData={data}
-                                            deleteItem={props.deleteItem}
+                                                  data={i}
+                                                  infoData={data}
+                                                  deleteItem={props.deleteItem}
+                                                  editItem={props.editItem}
+                                                  newItem={props.newItem}
     />)
     return (
-        <div className={style.main}>
-            <div className={style.main__leftbar}>
-                <CategoryBar/>
+        <div>
+            <div className={style.main}>
+                <div className={style.main__leftbar}>
+                    <CategoryBar/>
+                </div>
+                <div className={style.main__content}>
+                    {item}
+                </div>
             </div>
-            <div className={style.main__content}>
-                {item}
+            <div className={'btn btn-primary'}
+                 style={{position:"relative", left: "80.7vw", top:"2rem"}}
+                 onClick={() => onOpenNew()}
+            >
+                Створити товар
             </div>
+            <NewAutoModal onClose={onCloseNew} open={isNewModal} data={props.data} newItem={props.newItem}/>
         </div>
-    )
+    );
 }
 
 export default Resistors;

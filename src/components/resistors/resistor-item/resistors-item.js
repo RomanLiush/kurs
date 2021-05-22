@@ -8,6 +8,9 @@ import {faTrash, faEdit} from '@fortawesome/free-solid-svg-icons'
 
 import data from '../../../data/resistors.json';
 
+import EditAutoModal from "./editAutoModal";
+import NewAutoModal from "./newAutoModal";
+
 const adminValue = localStorage.getItem('admin');
 
 const admin = {
@@ -19,6 +22,16 @@ const ResistorsItem = (props) => {
     let arrData = props.infoData
     // console.log(props.infoData, 'arrrr')
     const [visible, setVisible] = useState(false);
+
+    const [isEditModal, setEditModal] = useState(false);
+
+    const onOpen = () => {
+        setEditModal(true)
+    }
+
+    const onClose = () => {
+        setEditModal(false)
+    }
 
     const [state, setState] = useState(props.infoData)
     // const delete_item = (id) => {
@@ -43,11 +56,18 @@ const ResistorsItem = (props) => {
         <div>
             <div className={style.main}>
                 <Card style={{width: '16rem', height: "420px"}}>
-                    <Card.Img variant="top" src={props.data.url} style={{width: '100%', height: "170px"}}/>
+                    <NavLink to={`/catalog/bmw/${props.data.id}`}><Card.Img variant="top"
+                              src={props.data.url}
+                              style={{width: '100%', height: "170px"}}
+                              onClick={() => {
+                                  setVisible(!visible)
+                                  props.setResID(props.data.id)
+                              }}
+                    /></NavLink>
                     <Card.Body>
-                        <Card.Title>Резистор: {props.data.model}</Card.Title>
+                        <Card.Title>Модель: {props.data.model}</Card.Title>
                         <Card.Text>
-                            Опір: {props.data.opir / 1000} кОм
+                            Розмір: {props.data.opir}
                         </Card.Text>
                         <Card.Text>
                             Потужність: {props.data.power} Вт
@@ -80,6 +100,9 @@ const ResistorsItem = (props) => {
                         {admin.key === 1 &&
                         <div
                             className={'btn btn-primary ml-2'}
+                            onClick={
+                                onOpen
+                            }
                         >
                             <FontAwesomeIcon
                                 icon={faEdit}
@@ -88,6 +111,9 @@ const ResistorsItem = (props) => {
                         }
                     </Card.Body>
                 </Card>
+                {/*Edit*/}
+                <EditAutoModal open={isEditModal} onClose={onClose} editItem={props.editItem} data={props.data}/>
+
             </div>
 
         </div>

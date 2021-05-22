@@ -1,7 +1,8 @@
-import React, {useState, forwardRef} from 'react';
+import React, {useState, forwardRef, useEffect} from 'react';
 
 import style from '../../../assets/style/scss/header/header-logo-input/header-logo-input.module.css'
-import logo from '../../../assets/images/blackchip-logo.png';
+// import logo from '../../../assets/images/blackchip-logo.png';
+import logo from '../../../assets/images/blackavto.svg';
 import {NavLink} from "react-router-dom";
 import CallIcon from '@material-ui/icons/Call';
 import SearchIcon from '@material-ui/icons/Search';
@@ -78,12 +79,16 @@ export default function HeaderLogoInput(props) {
     const [adminLogin, setAdminLogin] = useState('');
     const [adminPassword, setAdminPassword] = useState('');
 
-    (adminLogin === '' && adminPassword === '') ?
+    (adminLogin === 'admin' && adminPassword === 'admin') ?
         localStorage.setItem('admin', '1') : localStorage.setItem('admin', '0')
 
-    console.log(localStorage.getItem('admin'))
+    const adm = JSON.parse(localStorage.getItem('admin'));
 
-    const [openLogin, setOpenLogin] = useState(false);
+    useEffect(() => {
+        window.addEventListener("storage", () => isLogOut)
+    }, adm)
+
+    const [openLogin, setOpenLogin] = useState(true);
     const [isLogOut, setLogOut] = useState(false);
     const [isDialog, setDialog] = useState(false);
 
@@ -128,15 +133,99 @@ export default function HeaderLogoInput(props) {
                         >LogOut</span>)
                     }
                 </div>
-                <div
+                {!isLogOut && <div
                     className={style.HeaderLogoInput_main__content__basket}
                     onClick={handleLoginOpen}
                 >
                     <span className={'btn btn-primary'}>Registration</span>
-                </div>
+                </div>}
 
 
-                {isDialog && <Dialog
+                {/*{isDialog && <Dialog*/}
+                {/*    open={openLogin}*/}
+                {/*    TransitionComponent={Transition}*/}
+                {/*    keepMounted*/}
+                {/*    onClose={handleLoginClose}*/}
+                {/*    className={styles.lab5_dialog1}*/}
+                {/*>*/}
+                {/*    <Container component="main" maxWidth="xs">*/}
+                {/*        <CssBaseline/>*/}
+                {/*        <div className={classes.paper}>*/}
+                {/*            <Avatar className={classes.avatar}>*/}
+                {/*                <LockOutlinedIcon/>*/}
+                {/*            </Avatar>*/}
+                {/*            <Typography component="h1" variant="h5">*/}
+                {/*                Sign in*/}
+                {/*            </Typography>*/}
+                {/*            <form className={classes.form} noValidate>*/}
+                {/*                <TextField*/}
+                {/*                    variant="outlined"*/}
+                {/*                    margin="normal"*/}
+                {/*                    required*/}
+                {/*                    fullWidth*/}
+                {/*                    id="email"*/}
+                {/*                    label="Email Address"*/}
+                {/*                    name="email"*/}
+                {/*                    autoComplete="email"*/}
+                {/*                    autoFocus*/}
+                {/*                    onChange={event => setAdminLogin(event.target.value)}*/}
+                {/*                />*/}
+                {/*                <TextField*/}
+                {/*                    variant="outlined"*/}
+                {/*                    margin="normal"*/}
+                {/*                    required*/}
+                {/*                    fullWidth*/}
+                {/*                    name="password"*/}
+                {/*                    label="Password"*/}
+                {/*                    type="password"*/}
+                {/*                    id="password"*/}
+                {/*                    autoComplete="current-password"*/}
+                {/*                    onChange={event => setAdminPassword(event.target.value)}*/}
+                {/*                />*/}
+                {/*                <FormControlLabel*/}
+                {/*                    control={<Checkbox value="remember" color="primary"/>}*/}
+                {/*                    label="Remember me"*/}
+                {/*                />*/}
+                {/*                /!*<Link*!/*/}
+                {/*                /!*    href="/home"*!/*/}
+                {/*                /!*    // variant="body2"*!/*/}
+                {/*                /!*>*!/*/}
+                {/*                <Button*/}
+                {/*                    // type="submit"*/}
+                {/*                    fullWidth*/}
+                {/*                    variant="contained"*/}
+                {/*                    color="primary"*/}
+                {/*                    className={classes.submit}*/}
+                {/*                    onClick={() => {*/}
+                {/*                            setLogOut(prevState => !prevState)*/}
+                {/*                            setDialog(prevState => !prevState)*/}
+                {/*                        }*/}
+                {/*                    }*/}
+                {/*                >*/}
+                {/*                    Sign In*/}
+                {/*                </Button>*/}
+                {/*                /!*</Link>*!/*/}
+                {/*                <Grid container>*/}
+                {/*                    <Grid item xs>*/}
+                {/*                        <Link href="#" variant="body2">*/}
+                {/*                            Forgot password?*/}
+                {/*                        </Link>*/}
+                {/*                    </Grid>*/}
+                {/*                    <Grid item>*/}
+                {/*                        <Link href="#" variant="body2">*/}
+                {/*                            {"Don't have an account? Sign Up"}*/}
+                {/*                        </Link>*/}
+                {/*                    </Grid>*/}
+                {/*                </Grid>*/}
+                {/*            </form>*/}
+                {/*        </div>*/}
+                {/*        <Box mt={8}>*/}
+                {/*            <Copyright/>*/}
+                {/*        </Box>*/}
+                {/*    </Container>*/}
+                {/*</Dialog>}*/}
+
+                {<Dialog
                     open={openLogin}
                     TransitionComponent={Transition}
                     keepMounted
@@ -192,9 +281,10 @@ export default function HeaderLogoInput(props) {
                                     color="primary"
                                     className={classes.submit}
                                     onClick={() => {
-                                            setLogOut(prevState => !prevState)
-                                            setDialog(prevState => !prevState)
-                                        }
+                                        setLogOut(prevState => !prevState)
+                                        setDialog(prevState => !prevState)
+                                        setOpenLogin(prevState => !prevState)
+                                    }
                                     }
                                 >
                                     Sign In

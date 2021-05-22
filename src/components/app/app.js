@@ -47,26 +47,48 @@ const App = () => {
 
     const [arr,setArr] = useState([])
 
-    const [state, setState] = useState(resist_data)
+    const [state, setState] = useState(data_res);
+    // const [editState, setEditState] = useState(resist_data);
+
     const deleteItem = (id) => {
         setState(() => {
             const idx = state.findIndex(el => +el.id === id);
-            // const newArr = [
-            //     ...state.slice(0, idx),
-            //     ...state.slice(idx + 1)
-            // ]
-            // state.splice(0, idx)
-            // state.splice(idx + 1)
+
             const newArr = [
                 ...state.slice(0, idx),
                 ...state.slice(idx + 1)
             ]
 
-            console.log(id, 'id')
-            console.log(idx, 'idx')
-            console.log(newArr, 'NEW')
+            // console.log(id, 'id')
+            // console.log(idx, 'idx')
+            // console.log(newArr, 'NEW')
             return newArr
 
+        })
+    }
+
+
+
+    const editedAuto = localStorage.getItem('editAuto');
+
+    const editItem = (id) => {
+        setState(() => {
+            const idx = state.findIndex(el => +el.id === id);
+
+            console.log(id, 'id id')
+            console.log(idx, 'idx idx')
+
+            state.splice(id, 1, JSON.parse(editedAuto))
+            console.log(state, 'STATE')
+            const newArr = [...state]
+            return newArr
+        })
+    }
+
+    const newItem = (newAuto) => {
+        setState(() => {
+            const newArr = [...state, newAuto]
+            return newArr
         })
     }
 
@@ -87,13 +109,15 @@ const App = () => {
         <div>
             <BrowserRouter>
                 <Header data={arr}/>
-                <Route path='/home' exact render={() => <Homepage/>}/>
+                <Route path='/' exact render={() => <Homepage/>}/>
                 <Route path='/basket' render={() => <Busket data={arr}/>}/>
                 <Route path='/catalog' exact render={() => <Catalog/>}/>
                 <Route path='/rules' exact render={() => <Rules/>}/>
 
                 <Route path='/catalog/bmw'  exact render={() => <Resistors setResID={setResID}
                                                                                  deleteItem={deleteItem}
+                                                                                 editItem={editItem}
+                                                                                 newItem={newItem}
                                                                                  data={state}
 
                 />}/>

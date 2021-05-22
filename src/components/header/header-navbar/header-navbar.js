@@ -9,8 +9,8 @@ const HeaderNavbar = () => {
         <div className={style.main}>
             <div className={style.main__row_elements}>
                 <ul>
-                    <NavLink to={'/home'} activeClassName={style.act}><li>Home</li></NavLink>
-                    <NavLink to={'/catalog'} activeClassName={style.act}><li>Product catalog</li></NavLink>
+                    <NavLink to={'/'} activeClassName={style.act}><li>Головна</li></NavLink>
+                    <NavLink to={'/catalog'} activeClassName={style.act}><li>Каталог товарів</li></NavLink>
                     {/*<NavLink to={'/rules'} activeClassName={style.act}><li>Правила</li></NavLink>*/}
                     {/*<NavLink to={'/delivery'} activeClassName={style.act}><li>Доставка та оплата</li></NavLink>*/}
                     {/*<NavLink to={'/map'} activeClassName={style.act}><li>Карта Сайту</li></NavLink>*/}

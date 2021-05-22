@@ -21,7 +21,7 @@ export default function CategoryBar() {
 
     return (
         <div className={style.main}>
-            <span className={style.category}>Category</span>
+            <span className={style.category}>Категорії</span>
             <div className={style.trees}>
                 <TreeView
                     className={classes.root}

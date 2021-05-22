@@ -90,7 +90,7 @@ const ResistorInfoPage = (props) => {
                                             onClick={() => {
                                                 props.setArr( [...props.arr, {
                                                     img: props.data.url,
-                                                    name: `Резистор: ${props.data.model}`,
+                                                    name: `Деталь: ${props.data.model}`,
                                                     count_item: count,
                                                     price: props.data.price,
                                                     all_price: parseInt(allprice)
@@ -107,21 +107,21 @@ const ResistorInfoPage = (props) => {
 
                     <div className={style.two_block}>
                         <div className={style.two_block__item}><p>Опис</p></div>
-                        <div className={style.two_block__item}><p>Відгуки</p></div>
+                        {/*<div className={style.two_block__item}><p>Відгуки</p></div>*/}
                     </div>
                     <div className={style.full_desc}>
                         <div className={style.full_desc__title}>
-                            <p>
-                                Резистор 1.2k {props.data.model} 200V - це резистор вуглецевий 0,125 Вт потужністю, який широко використовують в різних схемах.
-                            </p>
+                            {/*<p>*/}
+                            {/*    Резистор 1.2k {props.data.model} 200V - це резистор вуглецевий 0,125 Вт потужністю, який широко використовують в різних схемах.*/}
+                            {/*</p>*/}
                             <p>Технічні характеристики:</p>
                             <ul>
-                                <li>Номінальний опір: {props.data.opir/1000} кОм</li>
-                                <li>Допустиме відхилення: {props.data.deviation}</li>
-                                <li>Розсіювана потужність: {props.data.power} Вт</li>
+                                {/*<li>Розмір: {props.data.opir}</li>*/}
+                                {/*<li>Допустиме відхилення: {props.data.deviation}</li>*/}
+                                <li>Потужність: {props.data.power} Вт</li>
                                 <li>Максимальна робоча напруга: {props.data.napruga} В</li>
-                                <li>Розмір: {props.data.size} мм</li>
-                                <li>Вага: {props.data.weigth} г</li>
+                                <li>Розмір: {props.data.size} cм</li>
+                                <li>Вага: {props.data.weigth} кг</li>
                             </ul>
                         </div>
                     </div>
