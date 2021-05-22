@@ -51,6 +51,8 @@ const App = () => {
     const [stateVolvo, setStateVolvo] = useState(data_cond);
     const [stateMers, setStateMers] = useState(data_tran);
     const [stateFord, setStateFord] = useState(data_rele);
+    const [stateVolk, setStateVolk] = useState(data_modem);
+    const [stateZAZ, setStateZAZ] = useState(data_term);
 
 //BMW
     const deleteItem = (id) => {
@@ -210,6 +212,84 @@ const App = () => {
     }
 
 
+//VOLKSWAGEN
+
+    const deleteItemVolk = (id) => {
+        setStateVolk(() => {
+            const idx = stateVolk.findIndex(el => +el.id === id);
+
+            const newArr = [
+                ...stateVolk.slice(0, idx),
+                ...stateVolk.slice(idx + 1)
+            ]
+
+            return newArr
+
+        })
+    }
+
+    // const editedAuto = localStorage.getItem('editAuto');
+
+    const editItemVolk = (id) => {
+        setStateVolk(() => {
+            const idx = stateVolk.findIndex(el => +el.id === id);
+
+            console.log(id, 'id id')
+            console.log(idx, 'idx idx')
+
+            stateVolk.splice(id, 1, JSON.parse(editedAuto))
+
+            const newArr = [...stateVolk]
+            return newArr
+        })
+    }
+
+    const newItemVolk = (newAuto) => {
+        setStateVolk(() => {
+            const newArr = [...stateVolk, newAuto]
+            return newArr
+        })
+    }
+
+//ZAZ
+
+    const deleteItemZAZ = (id) => {
+        setStateZAZ(() => {
+            const idx = stateZAZ.findIndex(el => +el.id === id);
+
+            const newArr = [
+                ...stateZAZ.slice(0, idx),
+                ...stateZAZ.slice(idx + 1)
+            ]
+
+            return newArr
+
+        })
+    }
+
+    // const editedAuto = localStorage.getItem('editAuto');
+
+    const editItemZAZ = (id) => {
+        setStateZAZ(() => {
+            const idx = stateZAZ.findIndex(el => +el.id === id);
+
+            console.log(id, 'id id')
+            console.log(idx, 'idx idx')
+
+            stateZAZ.splice(id, 1, JSON.parse(editedAuto))
+
+            const newArr = [...stateZAZ]
+            return newArr
+        })
+    }
+
+    const newItemZAZ = (newAuto) => {
+        setStateZAZ(() => {
+            const newArr = [...stateZAZ, newAuto]
+            return newArr
+        })
+    }
+
     return (
 
         <div>
@@ -268,14 +348,26 @@ const App = () => {
                                                                              setArr={setArr}
                 />}  />
 
-                <Route path='/catalog/modems'  exact render={() => <Modems setResID={setResID}/>}/>
-                <Route path='/catalog/modems/:id' render={() => <ModemInfoPage  data={data_modem[resID]}
+                <Route path='/catalog/volk'  exact render={() => <Modems setResID={setResID}
+                                                                           deleteItemVolk={deleteItemVolk}
+                                                                           editItemVolk={editItemVolk}
+                                                                           newItemVolk={newItemVolk}
+                                                                           data={stateVolk}
+
+                />}/>
+                <Route path='/catalog/volk/:id' render={() => <ModemInfoPage  data={data_modem[resID]}
                                                                                 arr={arr}
                                                                                 setArr={setArr}
                 />}  />
 
-                <Route path='/catalog/termistors'  exact render={() => <Termistors setResID={setResID}/>}/>
-                <Route path='/catalog/termistors/:id' render={() => <TermistorInfoPage  data={data_term[resID]}
+                <Route path='/catalog/zaz'  exact render={() => <Termistors setResID={setResID}
+                                                                            deleteItemZAZ={deleteItemZAZ}
+                                                                            editItemZAZ={editItemZAZ}
+                                                                            newItemZAZ={newItemZAZ}
+                                                                            data={stateZAZ}
+
+                />}/>
+                <Route path='/catalog/zaz/:id' render={() => <TermistorInfoPage  data={data_term[resID]}
                                                                                         arr={arr}
                                                                                         setArr={setArr}
                 />}  />

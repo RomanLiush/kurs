@@ -52,12 +52,12 @@ export default function CategoryBar() {
                     </div>
                     <div className={`${style.tree_item}`}>
                     <TreeItem nodeId="12" label="Volkswagen">
-                        <NavLink to={'/catalog/modems'}><TreeItem nodeId="2" label="Volkswagen"/></NavLink>
+                        <NavLink to={'/catalog/volk'}><TreeItem nodeId="2" label="Volkswagen"/></NavLink>
                     </TreeItem>
                     </div>
                     <div className={`${style.tree_item}`}>
                     <TreeItem nodeId="13" label="ZAZ">
-                        <NavLink to={'/catalog/termistors'}><TreeItem nodeId="2" label="ZAZ"/></NavLink>
+                        <NavLink to={'/catalog/zaz'}><TreeItem nodeId="2" label="ZAZ"/></NavLink>
                     </TreeItem>
                     </div>
                 </TreeView>
